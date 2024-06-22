@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Dinner page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="javascript.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light  ml-n3 mr-n3  navbar-custom" >
+      <a class="navbar-brand" href="#" style="color:white;">FOODLY</a>
+      <button class="navbar-toggler " type="button" data-toggle="collapse" 
+      data-target="#collapsibleNavId">
+        <span class="navbar-toggler-icon" style="background-color:white; border:1px solid white;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html" style="color:yellow;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-custom">
+            <a class="nav-link" href="About.html" style="color:yellow;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html" style="color:yellow;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:yellow;">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"  style="color:yellow;" >Menu items</a>
+            <div class="dropdown-menu" >
+              <a class="dropdown-item" href="Fast-food.html" style="color:yellow; background-color:black">Fast food</a>
+              <a class="dropdown-item" href="Cooked-food.html" style="color:yellow; background-color:black">Cooked food</a>
+              <a class="dropdown-item" href="Sea-food.html" style="color:yellow; background-color:black">Sea food</a>
+              <a class="dropdown-item" href="Vegetables.html" style="color:yellow; background-color:black">Vegetables</a>
+              <a class="dropdown-item" href="Juices.html" style="color:yellow; background-color:black">Juices</a>
+              <a class="dropdown-item" href="Breakfast.html" style="color:yellow; background-color:black">Break fast</a>
+              <a class="dropdown-item" href="Dinner.html" style="color:yellow; background-color:black">Dinner</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div> 
+    </nav>
+
+     <div class="jumbotron jumbotron-custom ml-n3 
+        mr-n3">
+       <div class="container">
+          <h1>Experence The Real Taste of Buri's Food</h1>  
+          <button>Menu</button>   
+          <button>Order Online</button> 
+          <button>Book a table</button>
+        </div>
+      </div>
+
+
+    <div class="row">
+      <div class="col-sm-3 ">
+        <h3 style="color:black;">Filters</h3>  
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="clicked">
+            <a href="Fast-food.html">Fast Food</a>
+          </label>
+        </div> 
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Cooked-food.html">Cooked Food</a>
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Sea-food.html">Sea Food</a>
+            
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Vegetables.html">Vegetables</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Juices.html">Juices</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Breakfast.html">Break Fast</a>
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Dinner.html">Dinner</a>
+          </label>
+        </div>
+
+        <div class="container mt-5" style="border: 2px solid white; box-shadow: 2px 2px 5px;">
+          <h3>Shopping List</h3>
+          <ul id="shopping-list" class="list-group">
+            <!-- Shopping list items will be appended here -->
+          </ul>
+          <h4>Total: <span id="total-price">0</span> USD</h4>
+          <button class="btn btn-primary" id="clear-cart" onclick="clearLastItem()">Clear Last Item</button>
+          <button type="submit" class="btn btn-success" id="sumit" onclick="submitOrder()">Submit</button>
+        </div>
+
+    
+      </div>
+
+      <div class="col-sm-9 ">
+        <div class="row">
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="Dinner-image/vegetarian-paella-12.webp" alt="photos">
+                <h5 class="card-title">Vegetarian Paella</h5>
+                <p class="card-text">onion, red bell pepper,carrots, garl... </p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>5.0</span>
+
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Dinner-image/vegetarian-paella-12.webp" alt="vegetarian paella" class="img-fluid mb-3">
+          <p>Ingredients include: extra virgin olive oil, onion, red bell pepper, carrots, garlic cloves, cherry tomatoes, spinach, green peas,artichoke hearts in water, black olives, saffron threads, spanish rice, vegetable broth, flat leaf parsley, lemon wedges</p>
+          <prev>
+            <ul>
+            <li>It’s made with one pot</li>
+           <li>Colorful, comforting, and fun</li>
+           <li>Full of veggies, and it also happens to be vegan!</li>
+           <li> Adaptable: You can use any veggies you like</li>
+           <li>Perfect for a weeknight dinner or gatherings with friends </li> 
+           </ul>
+          </prev>
+          <p>90 gr</p>
+          <p class="price"><b>7 USD</b></p>
+
+          <button class="add-to-list btn-outline-success" onclick="addToList('Vegetarian Paella', 7)">Add to list</button>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="Dinner-image/chicken nuggets.jpg" alt="nuggets">
+                <h5 class="card-title">Chicken nugget</h5>
+                <p class="card-text">Chicken, eggs flour,black pepper...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>3.6</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-2">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Dinner-image/chicken nuggets.jpg" alt="nuggets" class="img-fluid mb-3">
+          <p>Key ingredients include: chicken, eggs, black pepper, flour and olive oil</p>
+          
+          <p>50 gr</p>
+
+           <p class="price"><b>3.5 USD</b></p>
+           <button class="add-to-list btn-outline-success" onclick="addToList('Chicken nuggets', 3.5)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="Dinner-image/chicken parmigina.jpg" alt="parmigiana">
+                <h5 class="card-title">Chicken Parmigiana</h5>
+                <p class="card-text">Chicken, parmigian, mozzarella, breadcrum...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.4</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-3">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-3">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Dinner-image/chicken parmigina.jpg" alt="parmigiana" class="img-fluid mb-3">
+          <p>Key ingredients include: chicken, parmigian, mozzarella, breadcrumbs, eggs, milk, flour, tomatoes,</p>
+         
+          <p>40 gr</p>
+          <p class="price"><b>6.5 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Chicken parmigina', 6.5)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+                  <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="Dinner-image/waffles.jpg" alt="waffles">
+                <h5 class="card-title">Chicken waffles</h5>
+                <p class="card-text">Chicken, flour, paprika,black pepper...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.0</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-4">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-4">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Dinner-image/waffles.jpg" alt="nuggets" class="img-fluid mb-3">
+          <p>ingredient include: chicken, flour, paprika, black pepper, thyme cayennesse, salt and milk</p>
+          <p>70 gr</p>
+         <p class="price"><b>8 USD</b></p>
+         <button class="add-to-list btn-outline-success" onclick="addToList('Chicken waffles', 8)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="Dinner-image/ratatoil.jpg" alt="ratatoil">
+                <h5 class="card-title">Ratatouille</h5>
+                <p class="card-text">Zucchini, eggplant, bellpepper, tomato, onion...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>3.9</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-5">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-5">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Dinner-image/ratatoil.jpg" alt="ratatoil" class="img-fluid mb-3">
+          <p>Main ingredients include: Zucchini, eggplant, green and red pepper, tomato, onion, garlic, parsley and olive oil </p>
+          <p>100 gr</p>
+          <p class="price"><b>7 USD</b>
+            <button class="add-to-list btn-outline-success" onclick="addToList('Ratatouille', 7)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="Dinner-image/japache.jpg" alt="japache">
+                <h5 class="card-title">Japchae(Japchae)</h5>
+                <p class="card-text">Cellopha..., beef, carrot, spinach, onions...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.2</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-6">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-6">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+           <img src="Dinner-image/japache.jpg" alt="japache class="img-fluid mb-3">
+           <p>ingredients include: cellopha... beef, carrot, spinach, green and red pepper, onions, shiitake and garlic</p>
+          
+          <p>70 gr</p>
+           
+          <p class="price"><b>7 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Japchae', 7)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+ 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

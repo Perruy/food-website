@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Breakfast page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="javascript.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light  ml-n3 mr-n3  navbar-custom" >
+      <a class="navbar-brand" href="#" style="color:white;">FOODLY</a>
+      <button class="navbar-toggler " type="button" data-toggle="collapse" 
+      data-target="#collapsibleNavId">
+        <span class="navbar-toggler-icon" style="background-color:white; border:1px solid white;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html" style="color:yellow;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-custom">
+            <a class="nav-link" href="About.html" style="color:yellow;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html" style="color:yellow;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:yellow;">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"  style="color:yellow;" >Menu items</a>
+            <div class="dropdown-menu" >
+              <a class="dropdown-item" href="Fast-food.html" style="color:yellow; background-color:black">Fast food</a>
+              <a class="dropdown-item" href="Cooked-food.html" style="color:yellow; background-color:black">Cooked food</a>
+              <a class="dropdown-item" href="Sea-food.html" style="color:yellow; background-color:black">Sea food</a>
+              <a class="dropdown-item" href="Vegetables.html" style="color:yellow; background-color:black">Vegetables</a>
+              <a class="dropdown-item" href="Juices.html" style="color:yellow; background-color:black">Juices</a>
+              <a class="dropdown-item" href="Breakfast.html" style="color:yellow; background-color:black">Break fast</a>
+              <a class="dropdown-item" href="Dinner.html" style="color:yellow; background-color:black">Dinner</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div> 
+    </nav>
+
+     <div class="jumbotron jumbotron-custom ml-n3 
+        mr-n3">
+       <div class="container">
+          <h1>Experence The Real Taste of Buri's Food</h1>  
+          <button>Menu</button>   
+          <button>Order Online</button> 
+          <button>Book a table</button>
+        </div>
+      </div>
+
+
+    <div class="row">
+      <div class="col-sm-3 ">
+        <h3 style="color:black;">Filters</h3>  
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="clicked">
+            <a href="Fast-food.html">Fast Food</a>
+          </label>
+        </div> 
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Cooked-food.html">Cooked Food</a>
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Sea-food.html">Sea Food</a>
+            
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Vegetables.html">Vegetables</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Juices.html">Juices</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Breakfast.html">Break Fast</a>
+          </label>
+        </div>
+        
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Dinner.html">Dinner</a>
+          </label>
+        </div>
+
+        <div class="container mt-5" style="border: 2px solid white; box-shadow: 2px 2px 5px;">
+          <h3>Shopping List</h3>
+          <ul id="shopping-list" class="list-group">
+            <!-- Shopping list items will be appended here -->
+          </ul>
+          <h4>Total: <span id="total-price">0</span> USD</h4>
+          <button class="btn btn-primary" id="clear-cart" onclick="clearLastItem()">Clear Last Item</button>
+          <button type="submit" class="btn btn-success" id="sumit" onclick="submitOrder()">Submit</button>
+        </div>
+      </div>
+
+      <div class="col-sm-9 ">
+        <div class="row">
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="Breakfast-image/croissant.jpg" alt="photos">
+                <h5 class="card-title">Croissant</h5>
+                <p class="card-text">Most iconic: Ble sucre(paris, france)</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.5</span>
+
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Breakfast-image/croissant.jpg" alt="Pempek" class="img-fluid mb-3">
+          <h3>Eggs sugar salt flour butter milk</h3>
+          <p>These flaky, golden-colored, crescent-shaped pastries are best made with pure butter and a slightly sweet yeast dough. If made properly, the yellow-white interior should be just the slightest bit elastic when pulled from the center, ready to be covered with a pad of butter or some fresh jam.</p> 
+          <p class="price"><b>1.5 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Croissant', 1.5)">Add to list</button>
+         
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="Breakfast-image/borek.jpg" alt="photos">
+                <h5 class="card-title">Borek</h5>
+                <p class="card-text">Most iconic: Buregdzinica(Istanbul)</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.3</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-2">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Breakfast-image/borek.jpg" alt="Pempek" class="img-fluid mb-3">
+          <h3>egg, flour,blackpepper,onions etc.</h3>
+          <p>Börek is a baked dish consisting of a savory or sweet filling wrapped in yufka - thinly stretched sheets of dough made with flour, water, and salt. Heartier than phyllo, but thinner than a tortilla, hand-made yufka is typically brushed with butter before baking.</p>
+          <p>Although many countries have their own versions of this satisfying dish, it was probably invented during the Ottoman Empire in the Anatolian Provinces, an area that nowadays belongs to Turkey. Some sources suggest that börek might be even older, a descendant of the Eastern Roman (Byzantine) Anatolian dish known as en tyritas plakountas, consisting of layered dough filled with cheese, its recipe dating back to 160 BC.</p>
+          <p class="price"><b>7 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Borek', 7)">Add to list</button>
+         
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="Breakfast-image/churros.jpg" alt="photos">
+                <h5 class="card-title">Churros</h5>
+                <p class="card-text">Most iconic: Chocolateria san Gines(Madrid Spain)</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.1</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-3">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-3">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Breakfast-image/churros.jpg" alt="Pempek" class="img-fluid mb-3">
+          <h3>Flour olive oil salt sugar</h3>
+          <p>Elongated, crispy, crunchy and intensely fragrant, churros consist of deep-fried yeast dough encrusted with sugar. Although some may argue against consuming these sweet treats, warning others about the dangerous effects of sugar and fat on human bodies, the popularity of churros throughout the world doesn't seem to wane.</p>
+          <p>Originally invented by Spanish shepherds who could easily cook them in a pan over an open fire, today these unusually shaped, cinnamon sugar sprinkled twists are most commonly eaten in Spain and Latin America as a hot breakfast food, accompanied by a strong cup of coffee or a cup of thick hot chocolate.
+
+            Their characteristical shape is achieved by pressing the dough through plastic tubes so it emerges on the other side in thin, ridged ropes. Although churros are a Madrid specialty, the ones found in Seville are often praised because they differ in a lighter and more delicate texture.
+            
+            In Cuba, they may be filled with guava, in Mexico with dulce de leche, and in Uruguay with cheese. Regardless of the varieties, churros are an indulgence that must be tried at least once.</p>
+            <p class="price"><b>5 USD</b></p>
+            <button class="add-to-list btn-outline-success" onclick="addToList('Churros', 5)">Add to list</button>
+           
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+                  <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="Breakfast-image/Americanpancakes.jpg" alt="photos">
+                <h5 class="card-title">American pancakes</h5>
+                <p class="card-text">Most iconic: clinton st. Baking co.(manhattan, United States of America)</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.0</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-4">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-4">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Breakfast-image/Americanpancakes.jpg" alt="American pancake" class="img-fluid mb-3">
+          <h3>Flour, eggs, butter, milks, sugar, vanilla, salt, honey</h3>
+          <p>American pancakes are made from a thick batter consisting of eggs, flour, milk, and baking powder. Additionally, fruit such as apples, strawberries, and blueberries can also be added to the batter, along with buttermilk or chocolate chips. When served, they are usually stacked on top of each other, then topped with a variety of ingredients such as butter, maple syrup, fruit jam, honey, whipped cream, or peanut butter.
+
+            American pancakes are often served for breakfast in the United States of America and Canada, and are sometimes accompanied by fried eggs, bacon, or sausages. In America, there are a few varieties of pancakes, and the most popular ones are johnnycakes (made from fried cornmeal) and silver dollar pancakes (smaller than regular pancakes).
+            
+            Originally, pancakes were symbolic of the sun and played a key role in the early religious rituals of the Native Americans, who first made them from ground cornmeal that was then cooked on hot rocks.
+            UNITED STATES OF AMERICA
+            
+            </p>
+            <p>100 gr</p>
+            <p class="price"><b>4 USD</b></p>
+            <button class="add-to-list btn-outline-success" onclick="addToList('Americanpancakes', 4)">Add to list</button>
+           
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="Breakfast-image/gozleme.jpg" alt="photos">
+                <h5 class="card-title">Gözleme</h5>
+                <p class="card-text">Most iconic: Nazar Borek & Cafe(Goreme, Turkiye)...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.3</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-5">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-5">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Breakfast-image/gozleme.jpg" alt="gozleme" class="img-fluid mb-3">
+          <h3>ingredient include: Wheat, yeast Olive oil, yogurt, salt spinach, ground</h3>
+          <p>Gözleme is a Turkish flatbread consisting of flour, water, yeast, olive oil, and yogurt, which prevents the flatbread from going too brittle. The dough is filled with ingredients such as meat, vegetables, eggs, various cheeses, or mushrooms, and is then baked on a sac griddle.
+          </p>
+          <p>
+            Originally, gözleme was served for breakfast or as a light afternoon snack, but today it has a status of popular fast food that can be found throughout the country's restaurants, food carts, and cafés.</p>
+            <p>110 gr</p>
+            <p class="price"><b>4 USD</b></p>
+            <button class="add-to-list btn-outline-success" onclick="addToList('Gozleme', 4)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="Breakfast-image/medialunas.jpg" alt="photos">
+                <h5 class="card-title">Medialunas</h5>
+                <p class="card-text">Most iconic: Dos Escudos(Buenos Aires, Argentina)</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.2</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-6">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-6">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="Breakfast-image/medialunas.jpg" alt="Pempek" class="img-fluid mb-3">
+          <h3>ingredient include: Wheat, milk, sugar, eggs, yeast, honey, vanilla, butter </h3>
+          <p>These soft crescent rolls are regarded as the Argentinian take on traditional French croissants. Even though they are very similar to the French variety, medialunas are slightly more moist, smaller, and a bit sweeter. There are two traditional types of medialunas; the larger version made with butter, and the smaller version made with lard.</p>
+          <p>Both varieties are usually prepared plain, with a rum-and-sugar glaze on top. They are traditionally eaten for breakfast, ideally accompanied by a cup of strong coffee with milk, or as an afternoon snack served with yerba mate, a traditional Argentinian herbal tea.
+
+            Argentinians prefer to eat them with sweet condiments, jellies, dulce de leche, or chocolate spreads. Even though they are easily prepared at home, medialunas can also be bought in panaderias–traditional bakeries found throughout Argentina.</p>
+            <p>80 gr</p>
+            <p class="price"><b>5 USD</b></p>
+            <button class="add-to-list btn-outline-success" onclick="addToList('Medialunas', 5)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+ 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

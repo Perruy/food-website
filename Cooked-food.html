@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Cooked-food page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="javascript.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light  ml-n3 mr-n3  navbar-custom" >
+      <a class="navbar-brand" href="#" style="color:white;">FOODLY</a>
+      <button class="navbar-toggler " type="button" data-toggle="collapse" 
+      data-target="#collapsibleNavId">
+        <span class="navbar-toggler-icon" style="background-color:white; border:1px solid white;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html" style="color:yellow;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-custom">
+            <a class="nav-link" href="About.html" style="color:yellow;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html" style="color:yellow;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:yellow;">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"  style="color:yellow;" >Menu items</a>
+            <div class="dropdown-menu" >
+              <a class="dropdown-item" href="Fast-food.html" style="color:yellow; background-color:black">Fast food</a>
+              <a class="dropdown-item" href="Cooked-food.html" style="color:yellow; background-color:black">Cooked food</a>
+              <a class="dropdown-item" href="Sea-food.html" style="color:yellow; background-color:black">Sea food</a>
+              <a class="dropdown-item" href="Vegetables.html" style="color:yellow; background-color:black">Vegetables</a>
+              <a class="dropdown-item" href="Juices.html" style="color:yellow; background-color:black">Juices</a>
+              <a class="dropdown-item" href="Breakfast.html" style="color:yellow; background-color:black">Break fast</a>
+              <a class="dropdown-item" href="Dinner.html" style="color:yellow; background-color:black">Dinner</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div> 
+    </nav>
+
+     <div class="jumbotron jumbotron-custom ml-n3 
+        mr-n3">
+       <div class="container">
+          <h1>Experence The Real Taste of Buri's Food</h1>  
+          <button>Menu</button>   
+          <button>Order Online</button> 
+          <button>Book a table</button>
+        </div>
+      </div>
+
+
+    <div class="row">
+      <div class="col-sm-3 ">
+        <h3 style="color:black;">Filters</h3>  
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="clicked">
+            <a href="Fast-food.html">Fast Food</a>
+          </label>
+        </div> 
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Cooked-food.html">Cooked Food</a>
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Sea-food.html">Sea Food</a>
+            
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Vegetables.html">Vegetables</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Juices.html">Juices</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Breakfast.html">Break Fast</a>
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Dinner.html">Dinner</a>
+          </label>
+        </div>
+
+        <div class="container mt-5" style="border: 2px solid white; box-shadow: 2px 2px 5px;">
+          <h3>Shopping List</h3>
+          <ul id="shopping-list" class="list-group">
+            <!-- Shopping list items will be appended here -->
+          </ul>
+          <h4>Total: <span id="total-price">0</span> USD</h4>
+          <button class="btn btn-primary" id="clear-cart" onclick="clearLastItem()">Clear Last Item</button>
+          <button type="submit" class="btn btn-success" id="sumit" onclick="submitOrder()">Submit</button>
+        </div>
+      </div>
+
+      <div class="col-sm-9 ">
+        <div class="row">
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="cookedfood-image/roti.jpg" alt="photos">
+                <h5 class="card-title">Roti canai (Malaysia)</h5>
+                <p class="card-text">wheat, ghee, vegetable oil, sal... </p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.6</span>
+
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="cookedfood-image/roti.jpg" alt="Pempek" class="img-fluid mb-3">
+          <p>Key incredients are include: wheat, ghee, vegetable oil, salt,</p>
+          <p>Roti canai is a traditional pan-fried flatbread made with flour, water, eggs, and fat of Indian origin, but mainly associated with Malaysia, and surrounding countries like Indonesia, Brunei, and Thailand.
+
+            The dough for roti canai is repeatedly folded, so the final product has a layered texture, a soft interior, and a crispy outer layer. The most common fat used in roti canai is ghee, the traditional Indian clarified butter. It is believed that the dish originated in India when the Indian laborers who migrated to Malaysia brought the recipe and the tradition of preparing this crispy pastry to the foreign country.</p>
+            <p>If additional fillings are added, roti canai is usually shaped into rectangles. For example, in Malaysia, one can find various roti canai types, which are differentiated by the type of filling — egg, onion, egg and onion, banana, sardines, margarine and sugar, Maggi instant noodles, cheese, vegetable, and pork filling are some of the many available.
+
+              However, roti canai doesn't have to have a filling but only a topping, such as fried eggs, curry, beans, lentils, and coffee beans. But martabak, a thick roti filled with meats, eggs, onions, and spices, is probably the best-known type of roti canai.
+              
+              Apart from Malaysia, it can also be found in Saudi Arabia, Yemen, and a few other countries. Other than Malaysia, a very similar type of flatbread can be found in Singapore, where it's called roti prata. This crispy bread is usually sold by street vendors called mamaks.</p>
+          <p>85 gr</p>
+          <p class="price"><b>10 USD</b></p>
+
+          <button class="add-to-list btn-outline-success" onclick="addToList('Roti canai', 10)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="cookedfood-image/guotie.jpg" alt="photos">
+                <h5 class="card-title">Guotie (China)</h5>
+                <p class="card-text">wheat, ground, shrimps, scallions, shallots, ginger</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.6</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-2">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="cookedfood-image/guotie.jpg" alt="Guotie" class="img-fluid mb-3">
+          <p>Key ingredients include: wheat, shrimps, scallions, ginger, shallots.</p>
+          <p>The pan-fried variety of the Chinese jiaozi dumpling, known as guotie, is a Northern Chinese dumpling typically filled with minced pork, Chinese cabbage, scallions, ginger, rice wine, and sesame seed oil.
+
+            Crunchy and soft textures are achieved by a special method of preparing; while the bottom of the dumpling is frying, a small amount of liquid is added to the pan which is then covered, thus allowing the rest of the dumpling and the filling to steam.
+            
+            When it comes to the shape, guotie should always be long and straight as it can stand more easily and it does not fall over during cooking. Goutie can be literally translated as pot sticks, so these dumplings are often nicknamed potstickers, especially in North America.
+            
+            Although the first-known mention of goutie dates back to the Song Dynasty, today they are a popular street food, often eaten as a snack or an appetizer, typically accompanied by a dipping sauce.</p>
+          <p>100 gr</p>
+
+           <p class="price"><b>10 USD</b></p>
+           <button class="add-to-list btn-outline-success" onclick="addToList('Guotie', 10)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="cookedfood-image/khaosoi.jpg" alt="photos">
+                <h5 class="card-title">Khao soi(Thailand)</h5>
+                <p class="card-text">chicken, or beef, or pork, noodles,...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.1</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-3">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-3">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="cookedfood-image/khaosoi.jpg" alt="Khao soi" class="img-fluid mb-3">
+          <p>A signature dish of Northern Thailand, khao soi is a delicious coconut soup in which numerous regional influences were combined to create a truly spectacular dish. The base of the soup is a slightly spicy broth which combines coconut milk and red curry paste.</p>
+          <p>The broth is served with flat egg noodles and a choice of meat, which usually includes chicken, beef, and pork. It is topped with a handful of crisp fried noodles and chopped cilantro. The dish is commonly served alongside a variety of condiments such as fresh lime, pickled cabbage, shallots, and chilis.
+
+            Even though the dish originated in the north of the country, it is still not totally clear how and when this famous noodle soup was created. The most probable theory claims that khao soi is a fusion dish which originated under the influence of Chinese Muslims, traveling from the Yunnan region through Myanmar,Thailand, and Laos.</p>
+          <p>120 gr</p>
+          <p class="price"><b>7 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Khao soi', 7)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+                  <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="cookedfood-image/pernil.jpg" alt="photos">
+                <h5 class="card-title">Pernil(Puerto Rico)</h5>
+                <p class="card-text">Pork, garlic, salt, pepper, orgen...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.6</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-4">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-4">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="cookedfood-image/pernil.jpg" alt="Pernil" class="img-fluid mb-3">
+          <p>Ingredients include: pork, salt, pepper, oregano, vingegar, olive oil</p>
+          <p>Pernil is one of Puerto Rico's most famous dishes, a succulent roasted pork shoulder that is traditionally seasoned in a marinade called adobo mojado, consisting of paprika, salt, vinegar, garlic, and oregano. The name of the dish is derived from the Spanish word pierna, meaning leg, but it is also a Catalan word for ham, referring to the traditional recipe that calls for fresh ham</p>
+          <p>160 gr</p>
+         <p class="price"><b>15 USD</b></p>
+         <button class="add-to-list btn-outline-success" onclick="addToList('Pernil', 15)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="cookedfood-image/mouclach.jpg" alt="photos">
+                <h5 class="card-title">Mouclcade (La Rochelle,France)</h5>
+                <p class="card-text">Mussels, white wine, cream, saffron...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.9</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-5">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-5">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="cookedfood-image/mouclach.jpg" alt="mouclach" class="img-fluid mb-3">
+          <p>Main ingredients include: white wine, cream, saffron, curry garlic shallots parsley, black pepper, baguette </p>
+          <p>Mouclade is a traditional French dish originating from La Rochelle in south west France. In order to prepare it, mussels are cooked with cream, saffron, white wine, and a bit of curry spice. The key is in using the freshest mussels – preferably small, black, and glistening.
+
+            After the dish has been eaten, it's recommended to mop up the sauces with a crusty baguette. The dish reflects the long history of La Rochelle port with the east, and the name mouclade comes from the word moucle, which means mussel. Pair this seafood dish with a glass of white wine from the region.</p>
+          <p>150 gr</p>
+          <p class="price"><b>25 USD</b></p>
+
+          <button class="add-to-list btn-outline-success" onclick="addToList('Mouclade', 25)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="cookedfood-image/cozze alla.jpg" alt="photos">
+                <h5 class="card-title">Cozze alla Tarantina (Taranto,Italy)</h5>
+                <p class="card-text">Mussles, Tomato, garlic, parsley, chives...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.0</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-6">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-6">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+           <img src="cookedfood-image/cozze alla.jpg" alt="Cozze alla Tarantina" class="img-fluid mb-3">
+           <p>ingredients include: garlic, parsley, chivess,mussles, tomato, olivee oil, white wine, white and bread </p>
+           <p>Cozze alla Tarantina is a delicious seafood appetizer consisting of delicate, meaty mussels served in a spicy tomato sauce. It is important that the mussels are as fresh as possible. The tomato sauce is typically flavored with garlic, parsley, chiles, olive oil, white wine, and pepper.
+
+            For the best experience, it is recommended to serve the dish with toasted bread or croutons, which can be used to mop up all of the flavorful juices. Pair it with Pinot Grigio, Vermentino, Chardonnay, or Riesling.</p>
+          <p class="price"><b>25 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Cozze alla Tarantina', 25)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+ 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

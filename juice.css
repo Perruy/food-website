@@ -1,0 +1,173 @@
+
+    
+    /* Reset and basic styling */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+    /* Container layout */
+    .container {
+        display: flex;
+        min-height: 100vh;
+    }
+    /* Sidebar styling */
+    .sidebar {
+        width: 300px;
+        background-color: #2c3e50;
+        color: white;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+    .sidebar a {
+        color: white;
+        text-decoration: none;
+        margin: 10px 0;
+        display: block;
+    }
+    .sidebar a:hover {
+        text-decoration: underline;
+    }
+    /* Main content area */
+    .main-content {
+        flex: 1;
+        padding: 30px;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        color: #2c3e50;
+    }
+    .menu-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-body {
+        padding: 20px;
+    }
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .price {
+        font-size: 1.25rem;
+        color: #e74c3c;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .view-details {
+        background-color: #e74c3c;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+    .view-details:hover {
+        background-color: #c0392b;
+    }
+    /* Modal styling */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .modal-content {
+        height: 400px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 500px;
+        max-width: 100%;
+        overflow: auto;
+    }
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .modal-header h2 {
+        margin: 0;
+        font-size: 1.75rem;
+        color: #2c3e50;
+    }
+    .close {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #2c3e50;
+    }
+    .modal-body img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .modal-body p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    .add-to-list {
+        background-color: #27ae60;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+    .add-to-list:hover {
+        background-color: #1e8449;
+    }
+    .image {
+      width: 200px;
+      height: 200px;
+    }

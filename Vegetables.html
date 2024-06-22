@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Vegetables page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="javascript.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light  ml-n3 mr-n3  navbar-custom" >
+      <a class="navbar-brand" href="#" style="color:white;">FOODLY</a>
+      <button class="navbar-toggler " type="button" data-toggle="collapse" 
+      data-target="#collapsibleNavId">
+        <span class="navbar-toggler-icon" style="background-color:white; border:1px solid white;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="Home.html" style="color:yellow;">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-custom">
+            <a class="nav-link" href="About.html" style="color:yellow;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html" style="color:yellow;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:yellow;">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"  style="color:yellow;" >Menu items</a>
+            <div class="dropdown-menu" >
+              <a class="dropdown-item" href="Fast-food.html" style="color:yellow; background-color:black">Fast food</a>
+              <a class="dropdown-item" href="Cooked-food.html" style="color:yellow; background-color:black">Cooked food</a>
+              <a class="dropdown-item" href="Sea-food.html" style="color:yellow; background-color:black">Sea food</a>
+              <a class="dropdown-item" href="Vegetables.html" style="color:yellow; background-color:black">Vegetables</a>
+              <a class="dropdown-item" href="Juices.html" style="color:yellow; background-color:black">Juices</a>
+              <a class="dropdown-item" href="Breakfast.html" style="color:yellow; background-color:black">Break fast</a>
+              <a class="dropdown-item" href="Dinner.html" style="color:yellow; background-color:black">Dinner</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div> 
+    </nav>
+
+     <div class="jumbotron jumbotron-custom ml-n3 
+        mr-n3">
+       <div class="container">
+          <h1>Experence The Real Taste of Buri's Food</h1>  
+          <button>Menu</button>   
+          <button>Order Online</button> 
+          <button>Book a table</button>
+        </div>
+      </div>
+
+
+    <div class="row">
+      <div class="col-sm-3 ">
+        <h3 style="color:black;">Filters</h3>  
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="clicked">
+            <a href="Fast-food.html">Fast Food</a>
+          </label>
+        </div> 
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Cooked-food.html">Cooked Food</a>
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Sea-food.html">Sea Food</a>
+            
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Vegetables.html">Vegetables</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" value="">
+            <a href="Juices.html">Juices</a>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Breakfast.html">Break Fast</a>
+          </label>
+        </div>
+        
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" value="">
+            <a href="Dinner.html">Dinner</a>
+          </label>
+        </div>
+
+        <div class="container mt-5" style="border: 2px solid white; box-shadow: 2px 2px 5px;">
+          <h3>Shopping List</h3>
+          <ul id="shopping-list" class="list-group">
+            <!-- Shopping list items will be appended here -->
+          </ul>
+          <h4>Total: <span id="total-price">0</span> USD</h4>
+          <button class="btn btn-primary" id="clear-cart" onclick="clearLastItem()">Clear Last Item</button>
+          <button type="submit" class="btn btn-success" id="sumit" onclick="submitOrder()">Submit</button>
+        </div>
+      </div>
+
+      <div class="col-sm-9 ">
+        <div class="row">
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="vegetables image copy/colslaw.jpg" alt="photos">
+                <h5 class="card-title">Coleslaw(New York, United States Of America)</h5>
+                <p class="card-text">Cabbage, carrot, mayonnaise, sour, butter... </p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>3.5</span>
+
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-1">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="vegetables image copy/colslaw.jpg" alt="coleslaw" class="img-fluid mb-3">
+          <p>Key incredients are include: cabbage, carrot, mayonnaise,sour,buttermilk, vingegar and sugar</p>
+          <p>Originating from the Dutch term koolsla, meaning cabbage salad, coleslaw is nowadays a true American staple and a side dish that's often served with barbecued meat or fried chicken. Originally, it was brought over to New York state in the 18th century by the Dutch settlers.
+
+            It consists of shredded cabbage, mayonnaise, carrots, buttermilk or sour cream with vinegar, sugar, and other seasonings, depending on the cook and regional variations. Some of the variations have other ingredients such as salad dressings, celery seeds, grated cheese, pineapple, or peppers.</p>
+            <p>However, the only consistent ingredient in coleslaw is shredded cabbage. The salad is always served chilled, and it's commonly used in hamburgers, sandwiches, and hot dogs.</p> 
+          <p>70 gr</p>
+          <p class="price"><b>12 USD</b></p>
+
+          <button class="add-to-list btn-outline-success" onclick="addToList('Coleslaw', 12)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="vegetables image copy/caesar salad.jpg" alt="caesar">
+                <h5 class="card-title">Caesar salad(Tijuana, Mexico)</h5>
+                <p class="card-text">lettice, croutons, parmigian,eggs, garlic, lemon...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>3.9</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-2">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-2">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="vegetables image copy/caesar salad.jpg" alt="caesar" class="img-fluid mb-3">
+          <p>Key ingredients include: Lettuce, croutons, parmigian,eggs, garlic, lemon, worcesters and olive oil</p>
+          <p>The iconic Caesar salad was named after its creator Cesare (Caesar) Cardini, an Italian immigrant who lived in San Diego but, circumventing Prohibition laws in the United States, operated a popular restaurant in Tijuana, just south of the Mexican border.
+
+            Back then, in the 1920s, during the Prohibition era, Tijuana was flourishing as many Californians, including Hollywood jet set, would often drive over to party and enjoy the good life. And just like it was the case with many other world-famous dishes, Caesar salad was invented through sheer ingenuity and improvisation.</p>
+          
+          <p>80 gr</p>
+
+           <p class="price"><b>10.5 USD</b></p>
+           <button class="add-to-list btn-outline-success" onclick="addToList('Caesar salad', 10.5)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <img  class="card-img"src="vegetables image copy/greeksalad.jpg" alt="greek salad">
+                <h5 class="card-title">Greek salad(Horiatiki salata) Greece</h5>
+                <p class="card-text">Feta, elia, red onion, cucumber...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.4</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-3">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-3">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="vegetables image copy/greeksalad.jpg" alt="greek salad" class="img-fluid mb-3">
+          <p>Key ingredients include: Feta, elia, red onion, cucumber, bell.. tomato oregand and olive oil.</p>
+          <p>Greek salad, also known as village salad or horiatiki is the national dish of Greece, consisting of quartered tomatoes, sliced red onions, and chunky slices of cucumber. Depending on the region, there can also be olives, green peppers, feta cheese, oregano, salt, pepper, or a typical dressing made from olive oil and lemon or vinegar (optionally). When feta cheese is present in the salad, it is usually just sliced, but in some cases it's mixed in with a fork until slightly crumbled.
+
+            Its name suggests that it was a rural dish, when farmers would take some essential ingredients to the field and mix them together. Greek salad is a true summer dish, full of refreshing, raw vegetables and herbs. It is best to prepare it with ripe tomatoes that are in season, while the olives should be of the Kalamata variety.</p>
+            <p>Served in a shallow bowl, it is present on numerous Greek tables, either at home or in the taverns.</p>
+          <p>120 gr</p>
+          <p class="price"><b>7 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Greeksalad', 7)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+                  <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="vegetables image copy/caprese salad.jpg" alt="caprese salad">
+                <h5 class="card-title">Caprese salad(Capri Island Italy)</h5>
+                <p class="card-text">Tomato, Mozzzarella, basil, olive oil. </p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.3</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-4">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-4">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="vegetables image copy/caprese salad.jpg" alt="caprese salad" class="img-fluid mb-3">
+          <p>Tomato, mozzarella, basil and olive oil</p>
+          <p>Nothing embodies the essence of summer in southern Italy like vibrant colors of the flavorful insalata Caprese, a true classic of Neapolitan cuisine. The perfect combination of ripe, sun-kissed tomatoes, creamy mozzarella and fresh basil - this simple salad is believed to have originated on the island of Capri, hence the name.</p>
+          <p>Caprese was originally made with the Re Umberto or Fiascone tomatoes, traditionally grown along the beautiful Amalfi coast, and treccia di Sorrento, a type of braided mozzarella cheese. Also, contrary to popular practice, the authentic Caprese salad recipe doesn't call for balsamic or any other type of vinegar.</p>
+
+            <p>Instead, mozzarella and tomatoes are thickly sliced, arranged on a plate and garnished with basil leaves, sprinkled with some salt and white pepper, then finished with a generous drizzle of extra virgin olive oil.</p>
+          <p>70 gr</p>
+         <p class="price"><b>7 USD</b></p>
+         <button class="add-to-list btn-outline-success" onclick="addToList('caprese salad', 7)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="vegetables image copy/papayasalad.jpg" alt="papayasalad">
+                <h5 class="card-title">Papaya salad(Som tam Thailand)</h5>
+                <p class="card-text">Cabbage, onions, tomatoes, lemon...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.9</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-5">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-5">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+          <img src="vegetables image copy/papayasalad.jpg" alt="Papaya  salad" class="img-fluid mb-3">
+          <p>Main ingredients include: Cabbage, onions, tomatoes, olive oil </p>
+          Som tam is a green papaya salad mostly associated with the northeastern part of Thailand (Isaan), though it is often suggested that it first appeared in Laos.  Apart from thin strips of green papaya, this salad usually includes roasted peanuts, green beans, tomatoes, and a tangy sauce typically made with garlic, chili peppers, fish sauce, dried shrimps, palm sugar, and lime or tamarind juice.</p>
+          <p>150 gr</p>
+          <p class="price"><b>8 USD</b>
+            <button class="add-to-list btn-outline-success" onclick="addToList('Papaya salad', 8)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+
+
+
+          <div class="col-sm-4 mt-3 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="card-img" src="vegetables image copy/kisir.jpg" alt="kisir">
+                <h5 class="card-title">Kisir(Mersin, Turkiye)</h5>
+                <p class="card-text">Bulgur, tomato, lemon, pomegrana, min...</p>
+                <i class="fa fa-star" aria-hidden="true" style="color:gold;"></i><span>4.2</span>
+                 <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal-6">
+    View Details
+  </button>
+
+  <div class="modal" id="myModal-6">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <h1 class="modal-title">MAIN INGREDIENTS</h1>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+       
+        <div class="modal-body">
+           <img src="vegetables image copy/kisir.jpg" alt="kisir" class="img-fluid mb-3">
+           <p>ingredients include: Bulgur, tomato, lemon, pomegranada, mint, parsley, hot chilli pepper and garlic. </p>
+           <p>Kısır is a classic Turkish salad made with thin bulgur wheat, tomatoes, mint, garlic, parsley, and either lemon juice or sour pomegranate molasses. Red pepper flakes are often added to the salad to make it spicier. Lemon juice is typically used in northwestern Türkiye, while pomegranate molasses is more commonly used in the southeast of the country.</p>
+           <p>The salad is ideal for buffets and meze, but it is also often used as a side dish for a variety of barbecued meat dishes. It is traditionally served cold or at room temperature.</p>
+          <p>120 gr</p>
+           
+          <p class="price"><b>10 USD</b></p>
+          <button class="add-to-list btn-outline-success" onclick="addToList('Kisir', 10)">Add to list</button>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+              </div>  
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+ 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
