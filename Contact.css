@@ -162,7 +162,7 @@ Copy code
   border-bottom-right-radius: 10px;
 }
 
-/* Media query for tablets (up to 1024px) */
+
 @media (max-width: 1024px) {
   .container {
     width: 90%;
