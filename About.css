@@ -369,11 +369,6 @@ img {
         margin: 0 5%;
     }
 
-    .menu li {
-        font-size: 18px;
-        margin-left: 10px;
-    }
-
     .content {
         padding: 0 10px;
     }
@@ -408,19 +403,6 @@ img {
     .container {
         width: 100%;
         margin: 0;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    .menu li {
-        float: none;
-        font-size: 16px;
-        margin: 5px 0;
     }
 
     .content {
@@ -461,7 +443,4 @@ img {
         height: 150px;
     }
 
-    #btn li a {
-        margin-top: 50px;
-    }
 }
